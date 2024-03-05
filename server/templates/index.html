@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор рецептов</title>
+</head>
+<body>
+    <h1>Генератор рецептов</h1>
+    <a href="/all">Избранные рецепты</a>
+    <button id="gen_btn">Случайный рецепт</button><br>
+    <button id="add">Добавить в избранное</button>
+
+    <div class="Recipe">
+        <h2 id="recipe_name" class="title"></h2>
+        <img id="recipe_image" class="image" src="" alt=" ">
+        <p id="servings"></p>
+        <p id="readyInMinutes"></p>
+        <p id="healthScore"></p>
+        <p id="dishTypes"></p>
+        <a id="sourceLink" href="" target="_blank"> Источник</a>
+    </div>
+
+    <script src="{{ url_for('static', filename= 'script.js') }}"></script>
+</body>
+</html>
