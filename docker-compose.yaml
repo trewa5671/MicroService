@@ -3,9 +3,13 @@ version: '3'
 services:
 
   server:
+    depends_on:
+      - keycloak
     build:
       context: /server
       dockerfile: dockerfile
+    environment:
+      KEYCLOAK_URL: http://host.docker.internal:8080/
     ports:
       - 5051:5051
 
